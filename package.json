@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev:start",
-    "dev:start": "nodemon --ignore lib --exec babel-node src/server",
-    "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
+    "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
+    "dev:wds": "webpack-dev-server --progress",
+    "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && NODE_ENV=production webpack -p --progress",
     "prod:start": "NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
-    "test": "eslint src && flow && jest --coverage",
+    "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
+    "test": "npm run lint && flow && jest --coverage",
     "precommit": "npm run test",
     "prepush": "npm run test &&  npm run prod:build"
   },
@@ -21,10 +23,14 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-flow-react-proptypes": "^3.4.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-compat": "^1.0.4",
@@ -37,10 +43,16 @@
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "pm2": "^2.5.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "compression": "^1.7.0",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7"
   }
 }

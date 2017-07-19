@@ -1,7 +1,8 @@
 {
-	"env": {
-	  "jest": true
-	},
+  "env": {
+    "browser": true,
+    "jest": true
+  },
   "extends": [
     "airbnb",
     "plugin:flowtype/recommended"
