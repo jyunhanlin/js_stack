@@ -2878,6 +2878,34 @@
       "integrity": "sha1-EOhdo4v+p/xZk0HClu4ddyZu5kA=",
       "dev": true
     },
+    "fetch-mock": {
+      "version": "5.12.1",
+      "resolved": "https://registry.npmjs.org/fetch-mock/-/fetch-mock-5.12.1.tgz",
+      "integrity": "sha1-sYCDEPUasobRtIeoyznfvssNCXo=",
+      "dev": true,
+      "requires": {
+        "glob-to-regexp": "0.3.0",
+        "node-fetch": "1.7.1",
+        "path-to-regexp": "1.7.0"
+      },
+      "dependencies": {
+        "isarray": {
+          "version": "0.0.1",
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
+          "integrity": "sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=",
+          "dev": true
+        },
+        "path-to-regexp": {
+          "version": "1.7.0",
+          "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.7.0.tgz",
+          "integrity": "sha1-Wf3g9DW62suhA6hOnTvGTpa5k30=",
+          "dev": true,
+          "requires": {
+            "isarray": "0.0.1"
+          }
+        }
+      }
+    },
     "figures": {
       "version": "1.7.0",
       "resolved": "https://registry.npmjs.org/figures/-/figures-1.7.0.tgz",
@@ -4064,6 +4092,12 @@
         "is-glob": "2.0.1"
       }
     },
+    "glob-to-regexp": {
+      "version": "0.3.0",
+      "resolved": "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz",
+      "integrity": "sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=",
+      "dev": true
+    },
     "global": {
       "version": "4.3.2",
       "resolved": "https://registry.npmjs.org/global/-/global-4.3.2.tgz",
@@ -4259,6 +4293,11 @@
       "integrity": "sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0=",
       "dev": true
     },
+    "hoist-non-react-statics": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz",
+      "integrity": "sha1-qkSM8JhtVcxAdzsXF0t90GbLfPs="
+    },
     "home-or-tmp": {
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/home-or-tmp/-/home-or-tmp-2.0.0.tgz",
@@ -4416,6 +4455,11 @@
       "resolved": "https://registry.npmjs.org/ignore-by-default/-/ignore-by-default-1.0.1.tgz",
       "integrity": "sha1-SMptcvbGo68Aqa1K5odr44ieKwk=",
       "dev": true
+    },
+    "immutable": {
+      "version": "4.0.0-rc.2",
+      "resolved": "https://registry.npmjs.org/immutable/-/immutable-4.0.0-rc.2.tgz",
+      "integrity": "sha1-/dCUiq5yj9ojBqAvcrtz4Xc0MtE="
     },
     "imurmurhash": {
       "version": "0.1.4",
@@ -5413,6 +5457,11 @@
       "version": "4.17.4",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz",
       "integrity": "sha1-eCA6TRwyiuHYbcpkYONptX9AVa4="
+    },
+    "lodash-es": {
+      "version": "4.17.4",
+      "resolved": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.4.tgz",
+      "integrity": "sha1-3MHXVS4VCgZABzupyzHXDwMpUOc="
     },
     "lodash._baseassign": {
       "version": "3.2.0",
@@ -6840,6 +6889,20 @@
         "lodash": "4.17.4"
       }
     },
+    "react-redux": {
+      "version": "5.0.5",
+      "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.5.tgz",
+      "integrity": "sha1-+OjHsjlCJXblLWt9sGQ5RpvphGo=",
+      "requires": {
+        "create-react-class": "15.6.0",
+        "hoist-non-react-statics": "1.2.0",
+        "invariant": "2.2.2",
+        "lodash": "4.17.4",
+        "lodash-es": "4.17.4",
+        "loose-envify": "1.3.1",
+        "prop-types": "15.5.10"
+      }
+    },
     "read": {
       "version": "1.0.7",
       "resolved": "https://registry.npmjs.org/read/-/read-1.0.7.tgz",
@@ -6969,6 +7032,44 @@
           }
         }
       }
+    },
+    "reduce-reducers": {
+      "version": "0.1.2",
+      "resolved": "https://registry.npmjs.org/reduce-reducers/-/reduce-reducers-0.1.2.tgz",
+      "integrity": "sha1-+htHGLxSkqcd3R5dg5yb6pdw8Us="
+    },
+    "redux": {
+      "version": "3.7.2",
+      "resolved": "https://registry.npmjs.org/redux/-/redux-3.7.2.tgz",
+      "integrity": "sha512-pNqnf9q1hI5HHZRBkj3bAngGZW/JMCmexDlOxw4XagXY2o1327nHH54LoTjiPJ0gizoqPDRqWyX/00g0hD6w+A==",
+      "requires": {
+        "lodash": "4.17.4",
+        "lodash-es": "4.17.4",
+        "loose-envify": "1.3.1",
+        "symbol-observable": "1.0.4"
+      }
+    },
+    "redux-actions": {
+      "version": "2.2.1",
+      "resolved": "https://registry.npmjs.org/redux-actions/-/redux-actions-2.2.1.tgz",
+      "integrity": "sha1-1kGGslZJoTwFR4VH1811N7iSQQ0=",
+      "requires": {
+        "invariant": "2.2.2",
+        "lodash": "4.17.4",
+        "lodash-es": "4.17.4",
+        "reduce-reducers": "0.1.2"
+      }
+    },
+    "redux-mock-store": {
+      "version": "1.2.3",
+      "resolved": "https://registry.npmjs.org/redux-mock-store/-/redux-mock-store-1.2.3.tgz",
+      "integrity": "sha1-GzrSmdqRy0G6MNaOO28CRHX7nhs=",
+      "dev": true
+    },
+    "redux-thunk": {
+      "version": "2.2.0",
+      "resolved": "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.2.0.tgz",
+      "integrity": "sha1-5hWhbha0ehmlFXZhM9Hj6Zt4UuU="
     },
     "regenerate": {
       "version": "1.3.2",
@@ -7702,6 +7803,11 @@
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
       "integrity": "sha1-U10EXOa2Nj+kARcIRimZXp3zJMc="
+    },
+    "symbol-observable": {
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/symbol-observable/-/symbol-observable-1.0.4.tgz",
+      "integrity": "sha1-Kb9hXUqnEhvdiYsi1LP5vE4qoD0="
     },
     "symbol-tree": {
       "version": "3.2.2",
